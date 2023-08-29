@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>入力フォーム</title>
+    <link rel="stylesheet" href="/css/z.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="change flex">
+        <img src="CameraRoll/49_20230824114039.png" id="cursor">
+        <div class="form-container">
+            <h1 id="wq">乱獲交流会申し込み</h1>
+            <!-- エラーがあった際の表示 -->
+            <% if(errors.length){ %>
+                <ul class="error">
+                    <% for(var i = 0; i < errors.length; i++){ %>
+                        <li><%= errors[i] %></li>
+                    <% } %>
+                    <li>を入れてください</li>
+                </ul>
+            <% } %>
+            <form action="/insert" method="post">
+                
+                <label class="namae change">discordでの名前</label><br>
+                <input type="text" class="nr change" id="name" name="DiscordName"><br>
+                
+                <label class="namae change">TwitterID</label><br>
+                <input type="text" class="nr change" id="tid" name="twitterId"><br>
+                
+                <label class="namae change">スプラトゥーンでの名前</label><br>
+                <input type="text" class="nr change" id="spr"  name="gameName"><br>
+
+                <label id="rkh" class="change">
+                <input type="checkbox" class="change" name="ishost">乱獲経験者の方でホスト（その部屋での進行役）が<br>できる方はチェックお願いします。
+                </label>
+                
+                <div>
+                    <input type="submit" value="送信"id="ss" class="change">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/js/v.js"></script>
+</body>
+</html>
