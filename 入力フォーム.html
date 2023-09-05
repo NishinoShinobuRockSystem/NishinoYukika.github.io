@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://localhost:2000/insert -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>入力フォーム</title>
+    <link rel="stylesheet" href="./入力フォーム_files/z.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="change flex">
+        
+        <div class="form-container">
+            <h1 id="wq">乱獲交流会申し込み</h1>
+            <!-- エラーがあった際の表示 -->
+            
+            <form action="http://localhost:2000/insert" method="post">
+                
+                <label class="namae change">discordでの名前</label><br>
+                <input type="text" class="nr change" id="name" name="DiscordName"><br>
+                
+                <label class="namae change">TwitterID</label><br>
+                <input type="text" class="nr change" id="tid" name="twitterId"><br>
+                
+                <label class="namae change">スプラトゥーンでの名前</label><br>
+                <input type="text" class="nr change" id="spr" name="gameName"><br>
+
+                <label id="rkh" class="change">
+                <input type="checkbox" class="change" name="ishost" value="1">乱獲経験者の方でホスト（その部屋での進行役）が<br>できる方はチェックお願いします。
+                </label>
+                
+                <div>
+                    <input type="button" onclick="location.href='./参加完了.html';" value="送信" id="ss" class="change">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./入力フォーム_files/jquery-3.4.1.min.js.ダウンロード" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./入力フォーム_files/v.js.ダウンロード"></script>
+
+</body></html>
